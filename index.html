@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>app calc</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/slider.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/mainslider.css'>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <script src='js/slider.min.js'></script>
+    <script src='js/app.js'></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // инициализация слайдера
+            var slider = new SimpleAdaptiveSlider('.slider', {
+                autoplay: false,
+                interval: 10000,
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <div class="header-mobile">
+            <div>
+                <a class="logo-mobile" class="navbar-logo" href="">
+                    <span class="h1">WSB</span>
+                </a>
+            </div>
+            <div class="side-b side-open" onclick="openMenu()"> <i class="mdi  mdi-menu "></i>
+            </div>
+            <div class="side-b side-close" onclick="closeMenu()"> <i class="mdi  mdi-close "></i>
+            </div>
+        </div>
+        <nav class="top-menu">
+            <a class="navbar-logo" href="">
+                <span class="h1">Wall street Bot</span>
+            </a>
+
+            <ul class="menu-main">
+                <li><a class="active" href="">Главная</a></li>
+                <li><a href="">Установить робота</a></li>
+                <li><a href="">WSB</a></li>
+                <li><a href="">Настройка робота</a></li>
+                <li><a href="">Контакты</a></li>
+                <li><button class="button"> Попробовать робота</button></li>
+
+            </ul>
+        </nav>
+        <!-- Разметка слайдера -->
+        <div class="slider">
+            <div class="slider__wrapper">
+                <div class="slider__items">
+                    <div class="slider__item">
+                        <div class=box__slider>
+
+
+                            <span class="slider__item_testimonial2">
+                                <span class="slider__item_post2">При покупке робота</span>
+
+                            <span class="slider__item_name2">WALL STREET BOT</span>
+                            <span class="slider__item_text2">
+                            Вы получаете возможность работать всеми
+                            роботами из комплекта.Техподдержка и
+                            обновление роботов бесплатное.
+                                </span>
+                            <span class="slider__item_action2">
+                                    <button class="button slider-button" onclick="openCalc();">Расчитать прибыль </button>
+                                </span>
+                            </span>
+
+                        </div>
+                        <img class="img-fluid" src="img/1.jpg" alt="..." width="1920" height="752" loading="lazy">
+
+                    </div>
+                    <div class="slider__item">
+                        <span class="slider__item_inner">
+                            <span class="slider__item_img">
+                                <img class="slider__item_photo" src="img/1.jpg" alt="">
+
+                            </span>
+                        <span class="slider__item_testimonial">
+                                <span class="slider__item_name">WALL STREET BOT</span>
+                        <span class="slider__item_post">При покупке робота</span>
+                        <span class="slider__item_text">
+                            Вы получаете возможность работать всеми
+                            роботами из комплекта.Техподдержка и
+                            обновление роботов бесплатное.
+                                </span>
+                        <span class="slider__item_action">
+                                    <button class="button slider-button" onclick="openCalc();">Расчитать прибыль </button>
+                                </span>
+                        </span>
+                        </span>
+                    </div>
+                    <div class="slider__item">
+                        <span class="slider__item_inner">
+                            <span class="slider__item_img">
+                                <img class="slider__item_photo" src="img/1.jpg" alt="">
+                            </span>
+                        <span class="slider__item_testimonial">
+                                <span class="slider__item_name">WALL STREET BOT</span>
+                        <span class="slider__item_post">При покупке робота...</span>
+                        <span class="slider__item_text">
+                            Вы получаете возможность работать всеми
+                            роботами из комплекта.Техподдержка и
+                            обновление роботов бесплатное.
+                                </span>
+                        <span class="slider__item_action">
+                            <button class="button slider-button" onclick="openCalc();">Расчитать прибыль </button>
+                        </span>
+                        </span>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+            <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+        </div>
+
+        <div>
+
+        </div>
+    </div>
+    <div class="calc-form">
+        <div class=" calc-close" onclick="closeCalc()"> <i class="mdi  mdi-close "></i></div>
+        <strong class="h1">Калькулятор доходности</strong>
+        <strong class="h2">Вы можете расчитать эффективность работы робота исходя из суммы для инвестирования</strong>
+        <strong class="head-input">Введите планируемую сумму для инвестирования</strong>
+        <input class="calc-input summ" type="number" nama="summ" min="10000" value="1000000">
+        <strong class="head-input">Введите срок на который вы хотите вложить средства(количество дней)</strong>
+        <input class="calc-input days" type="number" name="day" min="10" value="60">
+        <div><button class="calc-button" onclick="calc();"> Расчитать</button>
+            <div class="calc-result">
+                <strong class="h1 ">Результат:</strong>
+                <strong class="h2" id="calc-result"></strong>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
