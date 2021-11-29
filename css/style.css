@@ -277,3 +277,21 @@ h1 {
         display: block;
     }
 }
+
+.page-body {
+    background: #282b30;
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;
+}
+
+.title {
+    width: 777px;
+    height: 52px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    color: #FFFFFF;
+}
