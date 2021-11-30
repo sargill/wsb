@@ -1,446 +1,472 @@
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-    body {
-        background-color: #282b30;
-        color: white;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    }
-    
-    a {
-        text-decoration: none;
-    }
-    
-    h1 {
-        color: white;
-        font-size: 24px;
-        line-height: 29px;
-    }
-    
-    .head-input {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 22px;
-        max-width: 500px;
-        color: #FFFFFF;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+body {
+    background-color: #282b30;
+    color: white;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: white;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.head-input {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 500px;
+    color: #FFFFFF;
+    display: block;
+    margin-top: 25px;
+}
+
+.h1 {
+    color: white;
+    font-size: 24px;
+    line-height: 29px;
+    display: block;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.h2 {
+    color: white;
+    font-size: 1em;
+    display: block;
+    text-align: center;
+}
+
+.slider-button {
+    text-align: center;
+    top: 10%;
+}
+
+.calc-form {
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    margin-top: 40px;
+    transform: translate(-50%, -50%);
+    background: #222428;
+    width: 85%;
+    max-width: 643px;
+    padding: 40px 40px 80px 40px;
+    z-index: 1070;
+    border-radius: 20px;
+}
+
+.calc-input {
+    max-width: 624px;
+    height: 61px;
+    background: #363638;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    margin: 15px auto;
+    padding: 0 10px;
+    color: white;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.calc-button {
+    width: 184px;
+    height: 54px;
+    border: none;
+    font-size: 18px !important;
+    line-height: 22px !important;
+    color: white;
+    background: linear-gradient(90deg, #219CF9 43.66%, #593DE7 100%);
+    box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+.button {
+    width: 184px;
+    height: 54px;
+    border: none;
+    color: white;
+    background: linear-gradient(90deg, #219CF9 43.66%, #593DE7 100%);
+    box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.absolute-centr {
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.calc-button :hover {
+    cursor: pointer;
+}
+
+.calc-result {
+    display: none;
+    width: 568px;
+    height: 58px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: auto;
+}
+
+#calc-result {
+    width: 568px;
+    height: 58px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.calc-close {
+    text-align: right;
+    position: fixed;
+    z-index: 1040;
+    font-size: 2.5em;
+    right: 2%;
+    top: 0.1%;
+}
+
+.calc-form .h1 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px !important;
+    line-height: 44px !important;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.calc-form .h2 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+
+
+/*header-mobile*/
+
+.header-mobile {
+    display: none;
+}
+
+@media (max-width: 960px) {
+    .header-mobile {
         display: block;
-        margin-top: 25px;
-    }
-    
-    .h1 {
-        color: white;
-        font-size: 24px;
-        line-height: 29px;
-        display: block;
-        text-align: center;
-        padding-bottom: 25px;
-    }
-    
-    .h2 {
-        color: white;
-        font-size: 1em;
-        display: block;
-        text-align: center;
-    }
-    
-    .slider-button {
-        text-align: center;
-        top: 10%;
-    }
-    
-    .calc-form {
-        position: absolute;
-        display: none;
-        left: 50%;
-        top: 50%;
-        margin-top: 40px;
-        transform: translate(-50%, -50%);
-        background: #222428;
-        width: 85%;
-        max-width: 643px;
-        padding: 40px 40px 80px 40px;
-        z-index: 1070;
-        border-radius: 20px;
-    }
-    
-    .calc-input {
-        max-width: 624px;
-        height: 61px;
-        background: #363638;
-        border-radius: 5px;
-        display: block;
-        width: 100%;
-        margin: 15px auto;
         padding: 0 10px;
-        color: white;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 22px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
     }
-    
-    .calc-button {
-        width: 184px;
-        height: 54px;
-        border: none;
-        font-size: 18px !important;
-        line-height: 22px !important;
-        color: white;
-        background: linear-gradient(90deg, #219CF9 43.66%, #593DE7 100%);
-        box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.25);
-        border-radius: 50px;
-        position: relative;
-        left: 50%;
-        transform: translate(-50%, 0);
-        cursor: pointer;
-        margin: 30px 0;
+    .header-mobile .h1 {
+        font-weight: bolder;
+        text-align: left !important;
+        margin-top: 10px;
+        margin: 10px 0 0 0;
     }
-    
-    .button {
-        width: 184px;
-        height: 54px;
-        border: none;
-        color: white;
-        background: linear-gradient(90deg, #219CF9 43.66%, #593DE7 100%);
-        box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.25);
-        border-radius: 50px;
-        position: relative;
-        cursor: pointer;
-    }
-    
-    .absolute-centr {
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
-    
-    .calc-button :hover {
-        cursor: pointer;
-    }
-    
-    .calc-result {
-        display: none;
-        width: 568px;
-        height: 58px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 29px;
-        text-align: center;
-        color: #FFFFFF;
-        margin: auto;
-    }
-    
-    #calc-result {
-        width: 568px;
-        height: 58px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 29px;
-        text-align: center;
-        color: #FFFFFF;
-    }
-    
-    .calc-close {
+    .side-open {
         text-align: right;
         position: fixed;
         z-index: 1040;
         font-size: 2.5em;
         right: 2%;
-        top: 0.1%;
+        top: 0;
     }
-    
-    .calc-form .h1 {
+    .side-close {
+        text-align: right;
+        position: fixed;
+        z-index: 1040;
+        font-size: 2.5em;
+        right: 2%;
+        top: 0%;
+        display: none;
+    }
+}
+
+
+/* меню*/
+
+.top-menu {
+    background: #282b30;
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;
+}
+
+.top-menu:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.navbar-logo {
+    display: inline-block;
+    display: inline-block;
+    margin-top: 11px;
+}
+
+.navbar-logo .h1 {
+    font-weight: bolder;
+}
+
+.menu-main {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.menu-main li {
+    display: inline-block;
+}
+
+.menu-main a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    line-height: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    transition: .3s linear;
+}
+
+.menu-main a:hover {
+    color: #2f84f4;
+}
+
+.menu-main .active {
+    color: #2f84f4;
+}
+
+.menu-main a:hover:before {
+    opacity: 1;
+}
+
+@media (min-width: 961px) {
+    .menu-main .button {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 960px) {
+    .menu-main {
+        float: none;
+        text-align: left;
+        padding: 20px;
+        position: fixed;
+        z-index: 1070;
+        background: #282b30;
+        width: 100%;
+    }
+    .menu-main li {
+        padding: 10px;
+    }
+    .top-menu {
+        text-align: center;
+        padding: 20px 0 0 0;
+        display: none;
+    }
+    .menu-main a {
+        padding: 0 10px;
+    }
+    .navbar-logo {
+        display: none;
+    }
+    .title {
         font-family: Montserrat;
         font-style: normal;
         font-weight: bold;
-        font-size: 36px !important;
-        line-height: 44px !important;
-        /* identical to box height */
-        color: #FFFFFF;
-    }
-    
-    .calc-form .h2 {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal !important;
         font-size: 18px !important;
-        line-height: 22px !important;
-        text-align: center;
+        line-height: 22px;
         color: #FFFFFF;
     }
-    
-    .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1050;
-        display: none;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        outline: 0;
+    .promo-b {
+        width: 256px;
+        height: 420px;
+        margin: 30px 10px 20px 10px !important;
+        float: left;
+        padding: 30px;
+        background: #2A2B2F;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     }
-    /*header-mobile*/
-    
-    .header-mobile {
-        display: none;
+}
+
+@media (max-width: 960px) {
+    .menu-main li {
+        display: block;
     }
-    
-    @media (max-width: 960px) {
-        .header-mobile {
-            display: block;
-            padding: 0 10px;
-        }
-        .header-mobile .h1 {
-            font-weight: bolder;
-            text-align: left !important;
-            margin-top: 10px;
-            margin: 10px 0 0 0;
-        }
-        .side-open {
-            text-align: right;
-            position: fixed;
-            z-index: 1040;
-            font-size: 2.5em;
-            right: 2%;
-            top: 0;
-        }
-        .side-close {
-            text-align: right;
-            position: fixed;
-            z-index: 1040;
-            font-size: 2.5em;
-            right: 2%;
-            top: 0%;
-            display: none;
-        }
-        #calc-result {
-            width: auto !important;
-        }
-        .calc-result {
-            width: auto !important;
-        }
-        /* меню*/
-        .top-menu {
-            background: #282b30;
-            max-width: 1300px;
-            margin: auto;
-            padding: 20px;
-        }
-        .top-menu:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        .navbar-logo {
-            display: inline-block;
-            display: inline-block;
-            margin-top: 11px;
-        }
-        .navbar-logo .h1 {
-            font-weight: bolder;
-        }
-        .menu-main {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            float: right;
-        }
-        .menu-main li {
-            display: inline-block;
-        }
-        .menu-main a {
-            text-decoration: none;
-            display: block;
-            position: relative;
-            line-height: 20px;
-            padding-left: 20px;
-            font-size: 16px;
-            letter-spacing: 2px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
-            color: #ffffff;
-            transition: .3s linear;
-        }
-        .menu-main a:hover {
-            color: #2f84f4;
-        }
-        .menu-main .active {
-            color: #2f84f4;
-        }
-        .menu-main a:hover:before {
-            opacity: 1;
-        }
-        @media (min-width: 961px) {
-            .menu-main .button {
-                margin-left: 100px;
-            }
-        }
-        @media (max-width: 960px) {
-            .menu-main {
-                float: none;
-                text-align: left;
-                padding: 20px;
-                position: fixed;
-                z-index: 1070;
-                background: #282b30;
-                width: 100%;
-            }
-            .menu-main li {
-                padding: 10px;
-            }
-            .top-menu {
-                text-align: center;
-                padding: 20px 0 0 0;
-                display: none;
-            }
-            .menu-main a {
-                padding: 0 10px;
-            }
-            .navbar-logo {
-                display: none;
-            }
-            .title {
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 18px !important;
-                line-height: 22px;
-                color: #FFFFFF;
-            }
-            .promo-b {
-                width: 256px;
-                height: 420px;
-                margin: 30px 10px 20px 10px !important;
-                float: left;
-                padding: 30px;
-                background: #2A2B2F;
-                box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-            }
-        }
-        @media (max-width: 960px) {
-            .menu-main li {
-                display: block;
-            }
-        }
-        .page-body {
-            background: #282b30;
-            max-width: 1360px;
-            margin: auto;
-            padding: 20px;
-        }
-        .promo-b {
-            width: 256px;
-            height: 420px;
-            margin: 60px 10px 20px 10px;
-            float: left;
-            padding: 30px;
-            background: #2A2B2F;
-            box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-        }
-        .promo-b:hover {
-            width: 260px;
-            height: 440px;
-            margin: 30px 10px 20px 10px;
-            background: linear-gradient(180deg, #219CF9 0%, #4E50EA 100%);
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        }
-        .promo-b:hover .button {
-            background: #2A2B2F;
-            box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.25);
-        }
-        .promo-b .button {
-            width: 244px;
-            height: 58px;
-            background: linear-gradient(90deg, #219CF9 43.66%, #593DE7 100%);
-            box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.25);
-            border-radius: 50px;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 22px;
-            color: #FFFFFF;
-        }
-        .promo-b div {
-            text-align: center;
-            clear: both;
-            padding: 20px 0 0 0;
-        }
-        .promo-b .h0 {
-            margin: 50px;
-            width: 125px;
-            height: 59px;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 48px;
-            line-height: 59px;
-            /* identical to box height */
-            color: #FFFFFF;
-        }
-        .promo-b .h1 {
-            width: 98px;
-            height: 22px;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 22px;
-            text-align: left;
-            /* identical to box height */
-            color: #FFFFFF;
-        }
-        .promo-b .h2 {
-            height: 22px;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 22px;
-            /* identical to box height */
-            color: #FFFFFF;
-        }
-        .promo-price {
-            padding: 0;
-            margin: 65px 0 65px 0;
-        }
-        .title {
-            width: 777px;
-            height: 52px;
-            text-align: left;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 48px;
-            line-height: 59px;
-            color: #FFFFFF;
-        }
-        .title-Buy {
-            width: 37px;
-            height: 22px;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 22px;
-            color: #385dc0;
-            padding: 25px 0 30px 8px;
-        }
-        .left {
-            float: left;
-            text-align: left;
-        }
-        .right {
-            float: right;
-            text-align: right;
-        }
+}
+
+.page-body {
+    background: #282b30;
+    max-width: 1360px;
+    margin: auto;
+    padding: 20px;
+}
+
+.promo-b {
+    width: 256px;
+    height: 420px;
+    margin: 60px 10px 20px 10px;
+    float: left;
+    padding: 30px;
+    background: #2A2B2F;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+
+.promo-b:hover {
+    width: 260px;
+    height: 440px;
+    margin: 30px 10px 20px 10px;
+    background: linear-gradient(180deg, #219CF9 0%, #4E50EA 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.promo-b:hover .button {
+    background: #2A2B2F;
+    box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.25);
+}
+
+.promo-b .button {
+    width: 244px;
+    height: 58px;
+    background: linear-gradient(90deg, #219CF9 43.66%, #593DE7 100%);
+    box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.promo-b div {
+    text-align: center;
+    clear: both;
+    padding: 20px 0 0 0;
+}
+
+.promo-b .h0 {
+    margin: 50px;
+    width: 125px;
+    height: 59px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.promo-b .h1 {
+    width: 98px;
+    height: 22px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: left;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.promo-b .h2 {
+    height: 22px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.promo-price {
+    padding: 0;
+    margin: 65px 0 65px 0;
+}
+
+.title {
+    width: 777px;
+    height: 52px;
+    text-align: left;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    color: #FFFFFF;
+}
+
+.title-Buy {
+    width: 37px;
+    height: 22px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #385dc0;
+    padding: 25px 0 30px 8px;
+}
+
+.left {
+    float: left;
+    text-align: left;
+}
+
+.right {
+    float: right;
+    text-align: right;
+}
