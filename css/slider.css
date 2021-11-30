@@ -21,7 +21,7 @@
 .slider__wrapper {
     position: relative;
     overflow: hidden;
-    background-color: #eee;
+    background-color: #212429;
 }
 
 
@@ -135,4 +135,5 @@
 
 .slider__indicator_active {
     background: linear-gradient(180deg, #219CF9 0%, #4E50EA 100%);
+    border: solid 1px #282b3000;
 }
