@@ -270,6 +270,23 @@ h1 {
     .navbar-logo {
         display: none;
     }
+    .title {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px !important;
+        line-height: 22px;
+        color: #FFFFFF;
+    }
+    .promo-b {
+        width: 256px;
+        height: 420px;
+        margin: 30px 10px 20px 10px !important;
+        float: left;
+        padding: 30px;
+        background: #2A2B2F;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    }
 }
 
 @media (max-width: 960px) {
@@ -288,9 +305,9 @@ h1 {
 .promo-b {
     width: 256px;
     height: 420px;
-    margin: 50px 10px 20px 10px;
+    margin: 60px 10px 20px 10px;
     float: left;
-    padding: 25px;
+    padding: 30px;
     background: #2A2B2F;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
@@ -308,9 +325,24 @@ h1 {
     box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.25);
 }
 
+.promo-b .button {
+    width: 244px;
+    height: 58px;
+    background: linear-gradient(90deg, #219CF9 43.66%, #593DE7 100%);
+    box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
 .promo-b div {
     text-align: center;
-    margin: 35px 0;
+    clear: both;
+    padding: 20px 0 0 0;
 }
 
 .promo-b .h0 {
@@ -324,6 +356,35 @@ h1 {
     line-height: 59px;
     /* identical to box height */
     color: #FFFFFF;
+}
+
+.promo-b .h1 {
+    width: 98px;
+    height: 22px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: left;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.promo-b .h2 {
+    height: 22px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.promo-price {
+    padding: 0;
+    margin: 65px 0 65px 0;
 }
 
 .title {
@@ -348,4 +409,14 @@ h1 {
     line-height: 22px;
     color: #385dc0;
     padding: 25px 0 30px 8px;
+}
+
+.left {
+    float: left;
+    text-align: left;
+}
+
+.right {
+    float: right;
+    text-align: right;
 }
