@@ -208,11 +208,15 @@
     <div class="calc-form">
         <div class=" calc-close" onclick="closeCalc()"> <i class="mdi  mdi-close "></i></div>
         <strong class="h1">Калькулятор доходности</strong>
-        <strong class="h2">Вы можете расчитать эффективность работы робота исходя из суммы для инвестирования</strong>
-        <strong class="head-input">Введите планируемую сумму для инвестирования</strong>
-        <input class="calc-input summ" type="number" nama="summ" min="10000" value="1000000">
-        <strong class="head-input">Введите срок на который вы хотите вложить средства(количество дней)</strong>
-        <input class="calc-input days" type="number" name="day" min="10" value="60">
+        <div>
+            <strong class="h2">Вы можете расчитать эффективность работы робота исходя из суммы для инвестирования</strong>
+        </div>
+        <div>
+            <strong class="head-input">Введите планируемую сумму для инвестирования</strong>
+        </div>
+        <div><input class="calc-input summ " type="number" nama="summ" min="10000" value="1000000"></div>
+        <div><strong class="head-input">Введите срок на который вы хотите вложить средства(количество дней)</strong></div>
+        <div><input class="calc-input days" type="number" name="day" min="10" value="60"></div>
         <div><button class="calc-button" onclick="calc();"> Расчитать</button>
             <div class="calc-result">
                 <strong class="h1 ">Результат:</strong>
