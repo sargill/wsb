@@ -17,8 +17,13 @@ h1 {
 }
 
 .head-input {
-    color: white;
-    font-size: 1em;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 500px;
+    color: #FFFFFF;
     display: block;
     margin-top: 25px;
 }
@@ -53,24 +58,27 @@ h1 {
     transform: translate(-50%, -50%);
     background: #222428;
     width: 85%;
-    max-width: 400px;
-    padding: 40px;
+    max-width: 743px;
+    padding: 40px 40px 80px 40px;
     z-index: 1070;
-    position: absolute;
-    background: #222428;
     border-radius: 20px;
 }
 
 .calc-input {
+    max-width: 624px;
+    height: 61px;
     background: #363638;
     border-radius: 5px;
-    border: none;
     display: block;
     width: 100%;
-    margin: 15px 0;
+    margin: 15px auto;
     padding: 10px;
     color: white;
-    font-size: 2em;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -81,6 +89,8 @@ h1 {
     width: 184px;
     height: 54px;
     border: none;
+    font-size: 18px !important;
+    line-height: 22px !important;
     color: white;
     background: linear-gradient(90deg, #219CF9 43.66%, #593DE7 100%);
     box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.25);
@@ -115,8 +125,28 @@ h1 {
 
 .calc-result {
     display: none;
-    width: 260px;
+    width: 568px;
+    height: 58px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
     margin: auto;
+}
+
+#calc-result {
+    width: 568px;
+    height: 58px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 .calc-close {
@@ -126,6 +156,26 @@ h1 {
     font-size: 2.5em;
     right: 2%;
     top: 0.1%;
+}
+
+.calc-form .h1 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px !important;
+    line-height: 44px !important;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.calc-form .h2 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 .modal {
