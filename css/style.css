@@ -225,6 +225,12 @@ h1 {
         top: 0%;
         display: none;
     }
+    #calc-result {
+        width: auto !important;
+    }
+    .calc-result {
+        width: auto !important;
+    }
 }
 
 
