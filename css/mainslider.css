@@ -117,7 +117,8 @@
         font-size: 48px;
         line-height: 59px;
         /* identical to box height */
-        color: #FFFFFF
+        color: #FFFFFF;
+        text-align: left;
     }
     
     .slider__item_post {
@@ -139,6 +140,7 @@
         font-size: 24px;
         line-height: 29px;
         color: #FFFFFF;
+        text-align: left;
     }
     
     .slider__item_action2 {
@@ -168,6 +170,7 @@
         font-size: 24px;
         line-height: 29px;
         color: #FFFFFF;
+        text-align: left;
     }
     
     @media (max-width: 575px) {
