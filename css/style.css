@@ -359,6 +359,9 @@ h1 {
         line-height: 22px;
         color: #FFFFFF;
     }
+    .pre-title {
+        margin: 7px 0 0px 0 !important;
+    }
     .promo-b {
         width: 256px;
         height: 420px;
@@ -478,6 +481,10 @@ h1 {
     font-size: 48px;
     line-height: 59px;
     color: #FFFFFF;
+}
+
+.pre-title {
+    margin: 18px 0 28px 2px;
 }
 
 .title-Buy {
